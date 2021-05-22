@@ -44,7 +44,7 @@ make O=$OUT_PATH ARCH=arm64 SUBARCH=arm64 CROSS_COMPILE=$BUILD_CROSS_COMPILE CC=
 make O=$OUT_PATH ARCH=arm64 SUBARCH=arm64 CROSS_COMPILE=$BUILD_CROSS_COMPILE CC=$CLANG_PREBUILD_BIN CLANG_TRIPLE=$CLANG_TRIPLE DTC_EXT=$DTC_EXT -j$THREADS
 
 # prepare boot image parameter for new boot image
-echo
+echo ####################################
 echo 'Making new "boot.img"'
 
 kernel=$OUT_PATH/arch/arm64/boot/Image.gz
@@ -78,7 +78,7 @@ echo os_patch_level=$os_patch_level
 echo header_version=$header_version
 
 # make new boot image
-$MKBOOTIMG_DIR/mkbootimg \
+$MKBOOTIMG_PATH/mkbootimg \
     --kernel "${kernel}" \
     --ramdisk "${ramdisk}" \
     --cmdline "${cmdline}" \
