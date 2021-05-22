@@ -21,7 +21,7 @@ cd kernel/msm-4.14 && bash setup-toolchain.sh
 ```
 So ```msm-4.14.log``` is a dir level above the kernel and contains the log
 #### Notes
-- ```OP7-perf_defconfig``` comes from /proc/config.gz of a real OP7 which ran on OOS 11.0.02 Global. 
+- ```OP7-perf_defconfig``` comes from /proc/config.gz of a real OP7 which ran on OOS 11.0.0.2 Global. 
 - ```2OP7-perf_defconfig``` the module singing is deactivated, ```CONFIG_BUILD_ARM64_DT_OVERLAY=y``` and compressed gzip creation is activated
 - For creating boot images, the script uses ```op7_global_11.0.0.2-boot.img``` as the source for the ramdisk and params. The kernel and ramdisk come from the output of the compilation
 
