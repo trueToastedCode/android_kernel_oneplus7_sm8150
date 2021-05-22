@@ -9,7 +9,7 @@ sudo ln -s /usr/bin/python2 /usr/bin/python
 ```
 #### Setup enviroment structure and kernel
 ```
-mkdir android && cd android && git clone https://github.com/trueToastedCode/android_kernel_oneplus7_sm8150.git kernel
+mkdir android && cd android && git clone --depth 1 -b 11.0.0.2/msm-4.14 https://github.com/trueToastedCode/android_kernel_oneplus7_sm8150.git kernel
 ```
 #### Setup toolchain
 ```
