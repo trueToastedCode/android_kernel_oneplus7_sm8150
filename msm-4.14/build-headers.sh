@@ -7,7 +7,6 @@ DEFCONFIG=2OP7-perf_defconfig
 CLANG_PREBUILD_BIN=$(pwd)/../../toolchain/clang-10.0.6/bin/clang
 LINUX_GCC_CROSS_COMPILE_PREBUILTS_BIN=$(pwd)/../../toolchain/xanaxdroid-aarch64-8.0/bin
 DTC_EXT=$(pwd)/../../toolchain/dtc-1.4.6/dtc
-MKBOOTIMG_PATH=$(pwd)/../../toolchain/mkbootimg
 
 OUT_PATH=../kernel-headers
 CLANG_TRIPLE=aarch64-linux-gnu-
