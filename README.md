@@ -16,14 +16,18 @@ mkdir android && cd android && git clone --depth 1 -b 11.0.0.2/msm-4.14 https://
 cd kernel/msm-4.14 && bash setup-toolchain.sh
 ```
 ## Compilation
+#### Full build with flashable zip
 ```
 ./build.sh 2>&1 | tee ../msm-4.14.log
 ```
-So ```msm-4.14.log``` is a dir level above the kernel and contains the log
+#### Only kernel headers
+```
+./build-headers.sh 2>&1 | tee ../msm-4.14_headers.log
+```
+So ```msm-4.14*_headers.log``` is a dir level above the kernel and contains the log
 #### Notes
 - ```OP7-perf_defconfig``` comes from /proc/config.gz of a real OP7 which ran on OOS 11.0.0.2 Global. 
 - ```2OP7-perf_defconfig``` the module singing is deactivated, ```CONFIG_BUILD_ARM64_DT_OVERLAY=y``` and compressed gzip creation is activated
-- For creating boot images, the script uses ```op7_global_11.0.0.2-boot.img``` as the source for the ramdisk and params. The kernel and ramdisk come from the output of the compilation
 
 ## Sources
 - https://github.com/OnePlusOSS/android_vendor_oneplus_opensource_kernel
