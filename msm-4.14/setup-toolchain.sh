@@ -1,8 +1,8 @@
 #!/bin/bash
 
 CLANG_GIT=https://gitlab.com/HDTC/gclang.git
-CLANG_BRANCH=9.0.5-r353983e
-CLANG_DIR=clang-9.0.5
+CLANG_BRANCH=10.0.6-r377782d
+CLANG_DIR=clang-10.0.6
 
 GCC_GIT=https://bitbucket.org/xanaxdroid/aarch64-8.0.git
 GCC_BRANCH=linaro
@@ -11,9 +11,6 @@ GCC_DIR=xanaxdroid-aarch64-8.0
 DTC_GIT=https://git.kernel.org/pub/scm/utils/dtc/dtc.git
 DTC_BRANCH=v1.4.6
 DTC_DIR=dtc-1.4.6
-
-MKBOOTIMG_GIT=https://github.com/osm0sis/mkbootimg.git
-MKBOOTIMG_DIR=mkbootimg
 
 ########################################################
 
@@ -41,12 +38,6 @@ git clone --depth 1 -b $GCC_BRANCH $GCC_GIT $GCC_DIR
 git clone --depth 1 -b $DTC_BRANCH $DTC_GIT $DTC_DIR
 cd $DTC_DIR
 sed -i '/YYLTYPE yylloc;/d' dtc-lexer.l
-make
-cd ..
-
-# mkbootimg
-git clone $MKBOOTIMG_GIT $MKBOOTIMG_DIR
-cd $MKBOOTIMG_DIR
 make
 cd ..
 
