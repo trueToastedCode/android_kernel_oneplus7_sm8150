@@ -81,9 +81,6 @@ fi
 ## AnyKernel install
 dump_boot;
 
-# Override DTB
-mv \$home/dtb \$home/split_img/;
-
 write_boot;
 ## end install" > "$temp_dir/anykernel.sh"
 
