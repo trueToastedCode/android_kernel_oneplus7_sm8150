@@ -74,7 +74,7 @@ ramdisk_compression=auto;
 
 # Detect device and system
 if ! [ -e /system/etc/buildinfo/oem_build.prop ]; then
-  ui_print \" \"; \"Custom rom detected. Abort installation since they are unsupported!\";
+  ui_print \" \"; ui_print \"Custom rom detected. Abort installation since they are unsupported!\";
   exit 1
 fi
 
