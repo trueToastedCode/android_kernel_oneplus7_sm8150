@@ -1,3 +1,7 @@
+## Info
+- Version: Android 11 (R)
+- Sync: Oxygen 11.0.0.2
+- Kernel: msm-4.14.190
 ## Steps to do
 #### Install dependencies
 (Not shure if all are required)
