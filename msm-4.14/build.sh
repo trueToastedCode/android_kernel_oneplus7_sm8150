@@ -42,6 +42,7 @@ cp $ANY_KERNEL_SAMPLE_PATH $FINAL_ZIP_PATH
 # add setup script to flashable
 echo "# AnyKernel3 Ramdisk Mod Script
 # osm0sis @ xda-developers
+
 ## AnyKernel setup
 # begin properties
 properties() { '
@@ -61,20 +62,19 @@ device.name7=hotdogb
 device.name8=hotdog
 supported.versions=10
 '; } # end properties
+
 # shell variables
 block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=1;
 ramdisk_compression=auto;
+
 ## AnyKernel methods (DO NOT CHANGE)
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
-# Detect device and system
-if ! [ -e /system/etc/buildinfo/oem_build.prop ]; then
-  ui_print \" \"; ui_print \"Custom rom detected. Abort installation since they are unsupported!\";
-  exit 1
-fi
+
 ## AnyKernel install
 dump_boot;
+
 write_boot;
 ## end install" > "$temp_dir/anykernel.sh"
 
