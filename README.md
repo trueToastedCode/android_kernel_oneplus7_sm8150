@@ -1,6 +1,7 @@
 ## Info
 - Version: Android 10 (Q)
 - Sync: Oxygen 10.3.5 - 10.3.8
+- Kernel: msm-4.14.117
 ## Steps to do
 #### Install dependencies
 (Not shure if all are required)
