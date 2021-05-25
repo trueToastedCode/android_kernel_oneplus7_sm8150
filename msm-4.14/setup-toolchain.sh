@@ -1,8 +1,8 @@
 #!/bin/bash
 
 CLANG_GIT=https://gitlab.com/HDTC/gclang.git
-CLANG_BRANCH=10.0.6-r377782d
-CLANG_DIR=clang-10.0.6
+CLANG_BRANCH=9.0.6-r365631
+CLANG_DIR=clang-9.0.6
 
 GCC_GIT=https://bitbucket.org/xanaxdroid/aarch64-8.0.git
 GCC_BRANCH=linaro
