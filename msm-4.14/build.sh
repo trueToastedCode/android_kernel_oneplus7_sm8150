@@ -2,7 +2,7 @@
 
 # ./build.sh 2>&1 | tee ../msm-4.14.log
 
-REVISION=1
+REVISION=R1
 FINAL_ZIP_PATH=../WireKernel-r$REVISION-4.14.190.zip
 DEFCONFIG=2OP7-perf_defconfig
 
@@ -85,17 +85,17 @@ write_boot;
 ## end install" > "$temp_dir/anykernel.sh"
 
 cd $temp_dir
-zip -r "$current_path/$FINAL_ZIP_PATH" anykernel.sh
+zip -r9 "$current_path/$FINAL_ZIP_PATH" anykernel.sh
 cd $current_path
 
 # add kernel to flashable
 cd "$OUT_PATH/arch/arm64/boot"
-zip -r "$current_path/$FINAL_ZIP_PATH" Image.gz
+zip -r9 "$current_path/$FINAL_ZIP_PATH" Image.gz
 
 # add dtb to flashable
 cp dts/qcom/sm8150-v2.dtb "$temp_dir/dtb"
 cd $temp_dir
-zip -r "$current_path/$FINAL_ZIP_PATH" dtb
+zip -r9 "$current_path/$FINAL_ZIP_PATH" dtb
 
 # clean up
 rm -rf $temp_dir
