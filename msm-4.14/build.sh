@@ -59,7 +59,7 @@ device.name5=guacamoleb
 device.name6=guacamole
 device.name7=hotdogb
 device.name8=hotdog
-supported.versions=11
+supported.versions=10
 '; } # end properties
 # shell variables
 block=/dev/block/bootdevice/by-name/boot;
@@ -79,17 +79,17 @@ write_boot;
 ## end install" > "$temp_dir/anykernel.sh"
 
 cd $temp_dir
-zip -r "$current_path/$FINAL_ZIP_PATH" anykernel.sh
+zip -r9 "$current_path/$FINAL_ZIP_PATH" anykernel.sh
 cd $current_path
 
 # add kernel to flashable
 cd "$OUT_PATH/arch/arm64/boot"
-zip -r "$current_path/$FINAL_ZIP_PATH" Image.gz
+zip -r9 "$current_path/$FINAL_ZIP_PATH" Image.gz
 
 # add dtb to flashable
 cp dts/qcom/sm8150-v2.dtb "$temp_dir/dtb"
 cd $temp_dir
-zip -r "$current_path/$FINAL_ZIP_PATH" dtb
+zip -r9 "$current_path/$FINAL_ZIP_PATH" dtb
 
 # clean up
 rm -rf $temp_dir
